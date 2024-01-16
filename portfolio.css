@@ -84,6 +84,30 @@
     height: 100vh;
 }
 
+/* About me */
+.image_about_one img {
+    flex: 1;
+    position: relative;
+    width: 50%;
+    height: auto;
+    max-height: 640px;
+    /* Set max-height for the image */
+    border-radius:14px;
+    /* Add border radius to give it a nice curve in the corners */
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.3);
+    /* Add a subtle box shadow */
+}
+
+.image_about_one {
+    position: fixed;
+    bottom: 200px;
+    left: 50px;
+}
+
+.image_about_one img:hover {
+    box-shadow: 0 14px 18px white;   
+}
+
 
 .circles {
     position: absolute;
