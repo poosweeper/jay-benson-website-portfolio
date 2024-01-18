@@ -1,14 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const image = document.querySelector('.image_about_one img');
+    const imageContainers = document.querySelectorAll('.image_container');
+    let isMouseOverContainer = false;
   
-    image.addEventListener('mouseenter', function () {
-      image.style.transition = 'transform 12s ease'; // Adjust the duration as needed
-      image.style.transform = 'translateY(500px)';
-    });
+    function handleMouseOver(event) {
+      isMouseOverContainer = true;
+      const targetImage = event.target;
   
-    image.addEventListener('mouseleave', function () {
-      image.style.transition = 'transform 10s ease'; // Adjust the duration as needed
-      image.style.transform = 'translateY(0)';
+      if (targetImage.tagName.toLowerCase() === 'img') {
+        targetImage.style.transition = 'transform 17s ease'; // Adjust the duration as needed
+        targetImage.style.transform = 'translateY(500px)';
+        targetImage.style.transform = 'translateX(200px)';
+      }
+    }
+  
+    function handleMouseOut(event) {
+      isMouseOverContainer = false;
+      const targetImage = event.target;
+  
+      if (targetImage.tagName.toLowerCase() === 'img') {
+        targetImage.style.transition = 'transform 5s ease'; // Adjust the duration as needed
+        targetImage.style.transform = 'translateY(0)';
+        targetImage.style.transform = 'translateX(0)';
+      }
+    }
+  
+    imageContainers.forEach(container => {
+      container.addEventListener('mouseover', handleMouseOver);
+      container.addEventListener('mouseout', handleMouseOut);
     });
   });
   

@@ -56,13 +56,13 @@ body {
 .menu_other li {
     display: inline-block;
     margin: 0 50px;
-    z-index: 20;
+    z-index: 100;
 }
 
 .menu_other ul {
     position: fixed;
-    left: 47%;
-    top: 1%;
+    left: 92%;
+    top: 3%;
     transform: translate(-50%, -50%);
     border-width: 1px 0;
     list-style: none;
@@ -91,7 +91,7 @@ body {
 /* About me */
 @keyframes moveUp {
     0% {
-      transform: translateY(500px);
+      transform: translateY(900px);
     }
     100% {
       transform: translateY(-1000px);
@@ -108,6 +108,8 @@ body {
     /* Add border radius to give it a nice curve in the corners */
     box-shadow: 0 14px 18px rgba(0, 0, 0, 0.3);
     /* Add a subtle box shadow */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }
 
 .image_about_one {
@@ -115,11 +117,54 @@ body {
   bottom: 0;
   left: 5%;
   transform: translateX(-50%);
-  animation: moveUp 15s linear infinite;
+  animation: moveUp 20s linear infinite;
 }
 
 .image_about_one img:hover {
     box-shadow: 0 14px 18px white;
+}
+
+.image_two img {
+    margin-top: 30px;
+}
+
+.image_three img {
+    margin-top: 30px;
+}
+
+.image_about_two img {
+    flex: 1;
+    width: 40%;
+    height: auto;
+    max-height: 640px;
+    /* Set max-height for the image */
+    border-radius:14px;
+    /* Add border radius to give it a nice curve in the corners */
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.3);
+    /* Add a subtle box shadow */
+}
+
+.image_about_two {
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  transform: translateX(-50%);
+  animation: moveUp 20s linear infinite;
+  animation-delay: 10s;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+.image_about_two img:hover {
+    box-shadow: 0 14px 18px white;
+}
+
+.image_six img {
+    margin-top: 30px;
+}
+
+.image_seven img {
+    margin-top: 30px;
 }
 
 
