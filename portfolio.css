@@ -167,6 +167,21 @@ body {
     margin-top: 30px;
 }
 
+.info_box {
+    position: fixed;
+    display: block;
+    width: 600px;
+    height: 400px;
+    background: whitesmoke;
+    left: 350px;
+    top: 80px;
+    border-radius:14px;
+    /* Add border radius to give it a nice curve in the corners */
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: black;
+    font-family: 'Baloo Thambi 2', cursive;
+}
 
 .circles {
     position: absolute;
