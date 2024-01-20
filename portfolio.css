@@ -94,16 +94,16 @@ body {
 /* About me */
 @keyframes moveUp {
     0% {
-      transform: translateY(900px);
+      transform: translateY(110%);
     }
     100% {
-      transform: translateY(-1000px);
+      transform: translateY(-800px);
     }
   }
 
 .image_about_one img {
     flex: 1;
-    width: 40%;
+    width: 60%;
     height: auto;
     max-height: 640px;
     /* Set max-height for the image */
@@ -113,12 +113,13 @@ body {
     /* Add a subtle box shadow */
     margin: 0; /* Reset margin */
     padding: 0; /* Reset padding */
+    
 }
 
 .image_about_one {
   position: fixed;
   bottom: 0;
-  left: 5%;
+  left: 10%;
   transform: translateX(-50%);
   animation: moveUp 20s linear infinite;
 }
@@ -135,33 +136,6 @@ body {
     margin-top: 30px;
 }
 
-.image_about_two img {
-    flex: 1;
-    width: 40%;
-    height: auto;
-    max-height: 640px;
-    /* Set max-height for the image */
-    border-radius:14px;
-    /* Add border radius to give it a nice curve in the corners */
-    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.3);
-    /* Add a subtle box shadow */
-}
-
-.image_about_two {
-  position: fixed;
-  bottom: 0;
-  left: 5%;
-  transform: translateX(-50%);
-  animation: moveUp 20s linear infinite;
-  animation-delay: 10s;
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
-}
-
-.image_about_two img:hover {
-    box-shadow: 0 14px 18px white;
-}
-
 .image_six img {
     margin-top: 30px;
 }
@@ -172,11 +146,11 @@ body {
 
 .info_box {
     position: fixed;
-    display: block;
-    width: 600px;
-    height: 400px;
+    display: inline-block;
+    width: 800px;
+    height: 250px;
     background: whitesmoke;
-    left: 350px;
+    right: 3%;
     top: 80px;
     border-radius:14px;
     /* Add border radius to give it a nice curve in the corners */
@@ -311,4 +285,18 @@ footer {
     width: 24px;
     height: 24px;
     margin: 5px; /* Add margin if needed */
+}
+
+
+/* Mobile */ 
+@media screen and (max-width: 768px) {
+    .TitleName {
+        font-size: 25px;
+        
+    }
+
+    .info_box {
+        width: 300px;
+        height: 550px;
+    }
 }
