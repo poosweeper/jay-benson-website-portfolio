@@ -1,3 +1,12 @@
+/* Turns the toggle off when on desktop */
+#toggle {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
 /* Title name */
 .TitleName {
     position: fixed;
@@ -23,12 +32,12 @@ body {
 .menu li {
     display: inline-block;
     margin: 0 50px;
-    z-index: 20;
+    z-index: 100;
 }
 
 .menu ul {
     position: fixed;
-    left: 47%;
+    left: 48%;
     top: 56%;
     transform: translate(-50%, -50%);
     border-width: 1px 0;
@@ -38,6 +47,7 @@ body {
     font-weight: 800;
     font-family: 'Baloo Thambi 2', cursive;
     text-shadow: 2px 2px 5px gray;
+    z-index: 100;
 }
 
 .menu a {
@@ -119,7 +129,7 @@ body {
 .image_about_one {
   position: fixed;
   bottom: 0;
-  left: 10%;
+  left: 5%;
   transform: translateX(-50%);
   animation: moveUp 20s linear infinite;
 }
@@ -147,8 +157,8 @@ body {
 .info_box {
     position: fixed;
     display: inline-block;
-    width: 800px;
-    height: 250px;
+    width: 550px;
+    height: 300px;
     background: whitesmoke;
     right: 3%;
     top: 80px;
@@ -287,16 +297,202 @@ footer {
     margin: 5px; /* Add margin if needed */
 }
 
-
-/* Mobile */ 
-@media screen and (max-width: 768px) {
+/* 4k */ 
+@media screen and (min-width: 2560px) and (max-width: 3000px) {
     .TitleName {
-        font-size: 25px;
-        
+        font-size: 100px;        
     }
 
     .info_box {
         width: 300px;
+        height: 500px;
+    }
+
+    .menu ul {
+        position: fixed;
+        left: 49%;
+        top: 56%;
+        z-index: 100;
+    }
+
+    nav li a {
+        font-size: 60px;
+    }
+
+    .social_media_icons img {
+        width: 54px;
+        height: 54px;
+        margin: 5px; /* Add margin if needed */
+    }
+
+    .info_box {
+        z-index: 1;
+        top: 120px;
+        height: 1480px;
+        width: 1750px;
+    }
+
+    .info_box h3 {
+        font-size: 70px;;
+    }
+
+    .info_box b {
+        font-size: 60px;;
+    }
+
+    .image_about_one img {
+        width: 110%;
+        height: auto;
+    }
+
+}
+
+/* 1440p */ 
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+    .TitleName {
+        font-size: 50px;        
+    }
+
+    .info_box {
+        width: 300px;
+        height: 500px;
+    }
+
+    .menu ul {
+        position: fixed;
+        left: 49%;
+        top: 56%;
+        z-index: 100;
+    }
+
+    nav li a {
+        font-size: 30px;
+    }
+
+    .info_box {
         height: 550px;
+        width: 750px;
+    }
+
+    .info_box h3 {
+        font-size: 30px;;
+    }
+
+    .info_box b {
+        font-size: 100%;;
+    }
+
+    .image_about_one img {
+        width: 80%;
+        height: auto;
+    }
+
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) and (max-width: 1399px) {
+    .info_box {
+        height: 600px;
+    }
+
+    .info_box h3 {
+        font-size: 23px;;
+    }
+
+    .info_box b {
+        font-size: 23px;;
     }
 }
+
+/* Tablet */ 
+@media screen and (max-width: 768px) {
+    .TitleName {
+        font-size: 25px;        
+    }
+
+    .info_box {
+        width: 300px;
+        height: 500px;
+    }
+    
+}
+
+/* Mobile */ 
+@media screen and (max-width: 450px) {
+    .TitleName {
+        font-size: 20px;        
+    }
+
+    .info_box {
+        position: absolute;
+        top: 50%; /* Move the top edge to the center vertically */
+        left: 50%; /* Move the left edge to the center horizontally */
+        transform: translate(-50%, -50%); /* Move the box back by half of its width and height */
+        text-align: center; /* Center the text horizontally */
+    }
+
+    /* Responsive navigation Bar */
+    label {
+        display: flex;
+        justify-content: flex-end; /* Align toggle icon to right */
+        cursor: pointer;
+        font-size: 28px;
+        color: bisque;
+        float: right;
+        margin-right: 15px;
+        position: relative;
+        z-index: 100;       
+
+    }
+    
+    #toggle {
+        display: none;
+    }
+      
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        border-radius: 20px;
+        position: absolute;
+        top: 0; /* Reset top position */
+        right: 0;
+        width: 100%; /* Re-introduce width */
+        height: max-content; /* Allow menu to grow based on content */
+        z-index: 200;
+        background-color: white;
+        align-items: flex-end; /* Align menu bottom to label bottom */
+    }
+
+    nav ul {
+        border-width: 1px 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+
+    nav li {
+        display: block;
+        padding: 5px;
+    }
+
+    nav li a {
+        position: relative;
+        left: 40vw;
+        bottom: 40vh;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 15px;
+        display: block;
+        color: black;
+    }
+
+    #toggle:checked + .menu {
+        display: flex;
+    }
+
+    .image_about_one img {
+        display: none;
+    }
+}
+
